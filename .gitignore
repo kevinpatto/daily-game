@@ -1,3 +1,7 @@
+## Gitignore taken from Djangowaves ##
+## URL: https://djangowaves.com/gitignore-for-a-django-project/ ##
+## Thanks!
+
 # Django #
 *.log
 *.pot
