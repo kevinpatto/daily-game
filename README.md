@@ -1,29 +1,5 @@
 # Daily Game, by Kevin Patto
 
-## Description
+## Development branch
 
-This is a website for a daily game. Currently, the game to be made is a 6-letter Wordle clone. The website will have a login system where users can track their scores, view previous days' games, and view a leaderboard.
-
-## Technologies Used
-
-Django, more to come...
-
-## Prerequisites
-
-TBD
-
-## Installation
-
-TBD
-
-## Configuration
-
-TBD
-
-## Running the application
-
-TBD
-
-## Known limitations
-
-TBD
+This is the development branch. This is where large changes are staged for merging to the main branch.
