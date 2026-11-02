@@ -2,11 +2,11 @@
 
 ## Description
 
-This is a website for a daily game. Currently, the game to be made is a 6-letter Wordle clone. The website will have a login system where users can track their scores, view previous days' games, and view a leaderboard.
+This is a website for a daily game in which players are given a unique start in tetris and 50 pieces to try to get the highest score. The website will have a login system where users can track their scores, view previous days' games, and view a leaderboard.
 
 ## Technologies Used
 
-Django, more to come...
+Django
 
 ## Prerequisites
 
