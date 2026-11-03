@@ -5,6 +5,7 @@
 {% block content %}
     {% if user.is_authenticated %}
         <p>This is your profile, {{ user.username }}!</p>
+        <p><a href="{% url "home" %}">Back to homepage</a></p>
         <form action="{% url 'logout' %}" method="post">
             {% csrf_token %}
             <button type="submit">Log Out</button>
