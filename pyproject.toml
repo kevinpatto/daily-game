@@ -3,5 +3,6 @@ name = "daily-game"
 version = "0.1.0"
 requires-python = ">=3.14"
 dependencies = [
+    "bcrypt>=5.0.0",
     "django>=6.1.2",
 ]
