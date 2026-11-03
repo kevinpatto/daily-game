@@ -1,8 +1,13 @@
+# taken from https://sixfeetup.com/blog/custom-password-validators-in-django
+# credit goes to the author: Anthony Bosio.
+# thank you!
+
 import re
 
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext as _
 
+# TODO: make validate & get_help_text into static methods, then convert methods in classes to calls
 
 class NumberValidator(object):
     def validate(self, password, user=None):
