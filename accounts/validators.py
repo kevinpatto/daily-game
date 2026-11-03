@@ -1,19 +1,19 @@
-# these custom validators were taken from
 import re
 
 from django.core.exceptions import ValidationError
+from django.utils.translation import gettext as _
 
 
 class NumberValidator(object):
     def validate(self, password, user=None):
         if not re.findall('\d', password):
             raise ValidationError(
-                "The password must contain at least 1 digit, 0-9.",
+                _("The password must contain at least 1 digit, 0-9."),
                 code='password_no_number',
             )
 
     def get_help_text(self):
-        return (
+        return _(
             "Your password must contain at least 1 digit, 0-9."
         )
 
@@ -22,35 +22,41 @@ class UppercaseValidator(object):
     def validate(self, password, user=None):
         if not re.findall('[A-Z]', password):
             raise ValidationError(
-                "The password must contain at least 1 uppercase letter, A-Z.",
+                _("The password must contain at least 1 uppercase letter, A-Z."),
                 code='password_no_upper',
             )
 
     def get_help_text(self):
-        return "Your password must contain at least 1 uppercase letter, A-Z."
+        return _(
+            "Your password must contain at least 1 uppercase letter, A-Z."
+        )
 
 
 class LowercaseValidator(object):
     def validate(self, password, user=None):
         if not re.findall('[a-z]', password):
             raise ValidationError(
-                "The password must contain at least 1 lowercase letter, a-z.",
+                _("The password must contain at least 1 lowercase letter, a-z."),
                 code='password_no_lower',
             )
 
     def get_help_text(self):
-        return "Your password must contain at least 1 lowercase letter, a-z."
+        return _(
+            "Your password must contain at least 1 lowercase letter, a-z."
+        )
 
 
 class SymbolValidator(object):
     def validate(self, password, user=None):
         if not re.findall('[()[\]{}|\\`~!@#$%^&*_\-+=;:\'",<>./?]', password):
             raise ValidationError(
-                "The password must contain at least 1 symbol: " +
-                "()[]{}|\`~!@#$%^&*_-+=;:'\",<>./?",
+                _("The password must contain at least 1 symbol: " +
+                  "()[]{}|\`~!@#$%^&*_-+=;:'\",<>./?"),
                 code='password_no_symbol',
             )
 
     def get_help_text(self):
-        return ("Your password must contain at least 1 symbol: "
-                + "()[]{}|\`~!@#$%^&*_-+=;:'\",<>./?")
+        return _(
+            "Your password must contain at least 1 symbol: " +
+            "()[]{}|\`~!@#$%^&*_-+=;:'\",<>./?"
+        )
